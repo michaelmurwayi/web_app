@@ -47,6 +47,9 @@ const navigationStyles = {
     height: NAVIGATION_CONSTANTS.LOGO_HEIGHT,
     width: "auto",
     objectFit: "contain",
+    border: "2px Solid",
+    borderColor: "#C8873A",
+    borderRadius: "50px",
   },
 
   brandText: {
@@ -86,7 +89,7 @@ const navigationStyles = {
     gap: NAVIGATION_CONSTANTS.ACTION_GAP,
   },
 
-  ctaButton: {
+  resourceButton: {
     display: {
       xs: "none",
       md: "inline-flex",
@@ -99,6 +102,17 @@ const navigationStyles = {
 
     textTransform: "none",
     fontWeight: 600,
+
+    background: "linear-gradient(90deg,  #EADDCA 0%,  #6F4E37 100%)",
+
+    color: "#000",
+
+    "&:hover": {
+      backgroundColor: "primary.dark",
+      backgroundImage: "none",
+      transform: "translateY(-1px)",
+      color: "white",
+    },
   },
 
   mobileMenuButton: {

@@ -2,7 +2,6 @@ import { memo, useMemo, useState } from "react";
 
 import {
   Box,
-  Button,
   Container,
   Drawer,
   IconButton,
@@ -10,12 +9,16 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Menu,
+  MenuItem,
+  Button,
   Typography,
   useScrollTrigger,
 } from "@mui/material";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
 import { NavLink } from "react-router-dom";
 
@@ -26,6 +29,10 @@ import NAVIGATION_CONSTANTS from "@/components/organisms/Navigation/Navigation.c
 
 const NavigationComponent = ({ config }: NavigationProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [resourceAnchor, setResourceAnchor] = useState<null | HTMLElement>(
+    null,
+  );
 
   const scrolled = useScrollTrigger({
     disableHysteresis: true,
@@ -40,6 +47,14 @@ const NavigationComponent = ({ config }: NavigationProps) => {
 
   const handleCloseDrawer = () => {
     setMobileOpen(false);
+  };
+
+  const handleOpenResources = (event: React.MouseEvent<HTMLElement>) => {
+    setResourceAnchor(event.currentTarget);
+  };
+
+  const handleCloseResources = () => {
+    setResourceAnchor(null);
   };
 
   const containerStyles = {
@@ -59,6 +74,7 @@ const NavigationComponent = ({ config }: NavigationProps) => {
       <Box component="header" sx={navigationStyles.header}>
         <Container maxWidth="xl">
           <Box sx={containerStyles}>
+            {/* Brand */}
             <Box component={NavLink} to="/" sx={navigationStyles.brand}>
               {config.brand.logo && (
                 <Box
@@ -74,6 +90,7 @@ const NavigationComponent = ({ config }: NavigationProps) => {
               </Typography>
             </Box>
 
+            {/* Desktop Navigation */}
             <Box
               component="nav"
               aria-label="Main navigation"
@@ -91,7 +108,7 @@ const NavigationComponent = ({ config }: NavigationProps) => {
                     <Typography
                       sx={{
                         ...navigationStyles.menuItem,
-                        fontWeight: isActive ? 700 : 400,
+                        fontWeight: isActive ? 700 : 500,
                         color: isActive ? "primary.main" : "text.primary",
                       }}
                     >
@@ -102,15 +119,41 @@ const NavigationComponent = ({ config }: NavigationProps) => {
               ))}
             </Box>
 
+            {/* Right Section */}
             <Box sx={navigationStyles.rightSection}>
               <Button
-                component={NavLink}
-                to={config.cta.path}
                 variant="contained"
-                sx={navigationStyles.ctaButton}
+                onClick={handleOpenResources}
+                endIcon={<KeyboardArrowDownRoundedIcon />}
+                sx={navigationStyles.resourceButton}
               >
-                {config.cta.label}
+                Resources
               </Button>
+
+              <Menu
+                anchorEl={resourceAnchor}
+                open={Boolean(resourceAnchor)}
+                onClose={handleCloseResources}
+                PaperProps={{
+                  sx: {
+                    mt: 1,
+                    minWidth: 260,
+                    borderRadius: 2,
+                  },
+                }}
+              >
+                {config.resources.map((resource) => (
+                  <MenuItem
+                    key={resource.id}
+                    component="a"
+                    href={resource.fileUrl}
+                    download
+                    onClick={handleCloseResources}
+                  >
+                    {resource.label}
+                  </MenuItem>
+                ))}
+              </Menu>
 
               <IconButton
                 aria-label="Open navigation menu"
@@ -124,13 +167,19 @@ const NavigationComponent = ({ config }: NavigationProps) => {
         </Container>
       </Box>
 
+      {/* Mobile Drawer */}
+
       <Drawer anchor="right" open={mobileOpen} onClose={handleCloseDrawer}>
         <Box sx={navigationStyles.drawer}>
+          {/* Drawer Header */}
+
           <Box sx={navigationStyles.drawerHeader}>
             <IconButton onClick={handleCloseDrawer}>
               <CloseRoundedIcon />
             </IconButton>
           </Box>
+
+          {/* Navigation Links */}
 
           <List>
             {navigationItems.map((item) => (
@@ -146,17 +195,33 @@ const NavigationComponent = ({ config }: NavigationProps) => {
             ))}
           </List>
 
+          {/* Resources */}
+
           <Box sx={navigationStyles.drawerFooter}>
-            <Button
-              component={NavLink}
-              to={config.cta.path}
-              variant="contained"
-              fullWidth
-              onClick={handleCloseDrawer}
-              sx={navigationStyles.mobileCTA}
+            <Typography
+              variant="subtitle2"
+              sx={{
+                mb: 1,
+                fontWeight: 700,
+                color: "text.secondary",
+              }}
             >
-              {config.cta.label}
-            </Button>
+              Resources
+            </Typography>
+
+            <List disablePadding>
+              {config.resources.map((resource) => (
+                <ListItem key={resource.id} disablePadding>
+                  <ListItemButton
+                    component="a"
+                    href={resource.fileUrl}
+                    download
+                  >
+                    <ListItemText primary={resource.label} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
           </Box>
         </Box>
       </Drawer>

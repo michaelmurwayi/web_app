@@ -4,9 +4,10 @@ export interface NavigationItem {
   path: string;
 }
 
-export interface NavigationCTA {
+export interface NavigationResource {
+  id: string;
   label: string;
-  path: string;
+  fileUrl: string;
 }
 
 export interface NavigationBrand {
@@ -17,7 +18,7 @@ export interface NavigationBrand {
 export interface NavigationConfig {
   brand: NavigationBrand;
   menuItems: NavigationItem[];
-  cta: NavigationCTA;
+  resources: NavigationResource;
 }
 
 export interface NavigationProps {
