@@ -16,8 +16,8 @@ const NAVIGATION_CONSTANTS = {
   TRANSITION: "all 0.3s ease",
 
   BACKGROUND: {
-    DEFAULT: "rgba(255,255,255,0.1)",
-    SCROLLED: "rgba(255,255,255,0.95)",
+    DEFAULT: "rgba(255,255,255,0)",
+    SCROLLED: "rgba(255,255,255,0.3)",
   },
 
   SHADOW: {

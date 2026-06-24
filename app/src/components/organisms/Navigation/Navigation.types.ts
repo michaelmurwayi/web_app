@@ -5,6 +5,7 @@ export interface NavigationItem {
 }
 
 export interface NavigationResource {
+  [x: string]: any;
   id: string;
   label: string;
   fileUrl: string;

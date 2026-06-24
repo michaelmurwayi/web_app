@@ -1,10 +1,13 @@
+import { Box } from "@mui/material";
+
+import { Header } from "@/components/organisms/Header/Header";
+import { headerConfig } from "@/components/organisms/Header/Header.config";
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Modern Coffee Ecosystem</h1>
-
-      <p>Welcome to the Home Page.</p>
-    </div>
+    <Box>
+      <Header config={headerConfig} />
+    </Box>
   );
 };
 
