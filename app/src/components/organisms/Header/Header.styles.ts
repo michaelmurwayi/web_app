@@ -1,4 +1,6 @@
 import HEADER_CONSTANTS from "@/components/organisms/Header/Header.contants";
+import { imageFloat } from "./Header.animations";
+import { imageBobIn } from "./Header.animations";
 
 export const headerStyles = {
   root: {
@@ -119,6 +121,10 @@ export const headerStyles = {
     border: "3px solid #c88736",
 
     boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
+    animation: `
+      ${imageBobIn} 1.4s ease-out forwards,
+      ${imageFloat} 6s ease-in-out 1.4s infinite
+    `,
   },
 
   description: {

@@ -44,20 +44,28 @@ const CoffeeBeansBackgroundComponent = ({
 }: CoffeeBeansBackgroundProps) => {
   const beans = useMemo(
     () =>
-      Array.from({ length: config.count }, (_, index) => ({
-        id: index,
+      Array.from({ length: config.count }, (_, index) => {
+        const depth = Math.random();
 
-        left: Math.random() * 20,
+        return {
+          id: index,
 
-        delay: Math.random() * 5,
+          depth,
 
-        duration:
-          config.minDuration +
-          Math.random() * (config.maxDuration - config.minDuration),
+          left: Math.random() * 100,
 
-        size:
-          config.minSize + Math.random() * (config.maxSize - config.minSize),
-      })),
+          delay: Math.random() * 10,
+
+          duration:
+            config.minDuration +
+            Math.random() * (config.maxDuration - config.minDuration),
+
+          size:
+            config.minSize + Math.random() * (config.maxSize - config.minSize),
+
+          rotation: Math.random() * 360,
+        };
+      }),
     [config],
   );
 
@@ -70,20 +78,27 @@ const CoffeeBeansBackgroundComponent = ({
             ...CoffeeBeansBackgroundStyles.bean,
 
             left: `${bean.left}%`,
-
             top: "-50px",
 
             width: bean.size,
+            height: bean.size * 1.4,
 
-            height: bean.size,
+            opacity: bean.depth < 0.3 ? 0.08 : bean.depth < 0.6 ? 0.15 : 0.25,
 
-            opacity: config.opacity,
+            filter:
+              bean.depth < 0.3
+                ? "blur(2px)"
+                : bean.depth < 0.6
+                  ? "blur(1px)"
+                  : "none",
+
+            zIndex: bean.depth < 0.3 ? 1 : bean.depth < 0.6 ? 2 : 3,
 
             animation: `${coffeeBeanFall}
-              ${bean.duration}s
-              linear
-              ${bean.delay}s
-              infinite`,
+            ${bean.duration}s
+            linear
+            ${bean.delay}s
+            infinite`,
           }}
         >
           <Box

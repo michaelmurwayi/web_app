@@ -1,7 +1,7 @@
 import leafImage from "@/assets/leaf.png";
 
 export const coffeeBeansConfig = {
-  count: 50,
+  count: 100,
 
   leafImage: leafImage,
 
