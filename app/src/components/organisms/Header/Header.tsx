@@ -5,7 +5,9 @@ import { Box, Typography } from "@mui/material";
 import { Navigation } from "@/components/organisms/Navigation";
 import { navigationConfig } from "@/components/organisms/Navigation";
 import { TypewriterText } from "@/components/atoms/TyperWriterText/TypeWriterText";
+import { CoffeeBeansBackground } from "@/components/molecules/CoffeeBeanBackground";
 
+import { coffeeBeansConfig } from "@/config/animations/coffeeBeans.config";
 import { headerStyles } from "./Header.styles";
 
 import type { HeaderProps } from "./Header.types";
@@ -13,6 +15,7 @@ import type { HeaderProps } from "./Header.types";
 const HeaderComponent = ({ config }: HeaderProps) => {
   return (
     <Box sx={headerStyles.root}>
+      <CoffeeBeansBackground config={coffeeBeansConfig} />
       <Navigation config={navigationConfig} />
 
       <Box sx={headerStyles.body}>

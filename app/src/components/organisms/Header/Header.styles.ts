@@ -2,11 +2,18 @@ import HEADER_CONSTANTS from "@/components/organisms/Header/Header.contants";
 
 export const headerStyles = {
   root: {
+    position: "relative",
+    overflow: "hidden",
+
     minHeight: "100vh",
+
     background: "radial-gradient(circle at center, #fdf9f3 0%, #f8f3ea 100%)",
   },
-
   body: {
+    position: "relative",
+
+    zIndex: 2,
+
     maxWidth: HEADER_CONSTANTS.MAX_WIDTH,
 
     margin: "0 auto",

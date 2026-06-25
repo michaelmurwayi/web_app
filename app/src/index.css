@@ -109,14 +109,25 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
+
+@keyframes coffeeBeanFall {
+  0% {
+    transform: translate3d(0px, -100px, 0) rotate(0deg);
   }
 
-  51%,
+  25% {
+    transform: translate3d(50px, 25vh, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate3d(150px, 50vh, 0) rotate(180deg);
+  }
+
+  75% {
+    transform: translate3d(250px, 75vh, 0) rotate(270deg);
+  }
+
   100% {
-    opacity: 0;
+    transform: translate3d(400px, 120vh, 0) rotate(360deg);
   }
 }
