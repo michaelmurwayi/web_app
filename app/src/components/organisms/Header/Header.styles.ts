@@ -8,6 +8,7 @@ export const headerStyles = {
     overflow: "hidden",
 
     minHeight: "100vh",
+    height: "100vh",
 
     background: "radial-gradient(circle at center, #fdf9f3 0%, #f8f3ea 100%)",
   },
