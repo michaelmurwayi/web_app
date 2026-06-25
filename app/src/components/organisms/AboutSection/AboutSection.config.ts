@@ -7,5 +7,5 @@ export const aboutSectionConfig: AboutSectionConfig = {
 
   autoPlay: true,
 
-  autoPlayDelay: 6000,
+  autoPlayDelay: 15000,
 };

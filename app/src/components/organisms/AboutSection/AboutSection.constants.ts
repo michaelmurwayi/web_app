@@ -5,8 +5,8 @@ import Source from "@/assets/source.png";
 export const ABOUT_SECTION_SLIDES: AboutSlide[] = [
   {
     id: 1,
-    eyebrow: "WE ARE CEBBA",
-    title: "About Us",
+    eyebrow: "ABOUT US",
+    title: "WE ARE CEBBA",
     description:
       "At CEBBA we are driven by the welfare of coffee producers, ensuring fair compensation and fostering sustainable practices that empower farmers and creating wealth for local communities. Our sustainable operations are designed to drive positive climate outcomes by integrating eco-friendly farming techniques that not only support healthier ecosystems but also ensure the long-term viability of coffee cultivation. Through this commitment, they actively contribute to climate resilience while strengthening local communities and securing a sustainable future for coffee growers worldwide.. Committed to quality excellence, Coffee Estates Bourgeoisie Brokers Agency Limited meticulously curates and delivers premium coffee, satisfying even the most discerning palates and setting a new standard in the global coffee trade.",
     image: About,

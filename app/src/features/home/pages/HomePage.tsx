@@ -6,12 +6,17 @@ import {
   AboutSection,
   aboutSectionConfig,
 } from "@/components/organisms/AboutSection";
+import {
+  OurServices,
+  ourServicesConfig,
+} from "@/components/organisms/OurServices";
 
 const HomePage = () => {
   return (
     <Box>
       <Header config={headerConfig} />
       <AboutSection config={aboutSectionConfig} />
+      <OurServices config={ourServicesConfig} />
     </Box>
   );
 };

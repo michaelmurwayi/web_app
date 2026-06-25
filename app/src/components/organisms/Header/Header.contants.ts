@@ -4,20 +4,18 @@ const HEADER_CONSTANTS = {
   LEFT_FLEX: 1.15,
   RIGHT_FLEX: 1,
 
-  IMAGE_SIZE: 320,
-
   WORD_GAP: -2,
 
   CTA_RADIUS: "999px",
 
   SECTION_PADDING_X: {
-    xs: 3,
+    xs: 2,
     md: 8,
     lg: 12,
   },
 
   SECTION_PADDING_Y: {
-    xs: 4,
+    xs: 2,
     md: 8,
   },
 };

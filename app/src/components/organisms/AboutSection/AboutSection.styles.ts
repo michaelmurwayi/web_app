@@ -43,7 +43,7 @@ export const AboutSectionStyles: AboutSectionStyle = {
   },
 
   slide: {
-    animation: "fadeSlide 700ms ease",
+    animation: "fadeSlide 1000ms ease",
   },
 
   content: {

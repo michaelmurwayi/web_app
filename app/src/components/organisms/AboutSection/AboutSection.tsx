@@ -50,7 +50,6 @@ const AboutSectionComponent = ({ config }: AboutSectionProps) => {
               component="img"
               src={slide.image}
               alt={slide.title}
-              loading="lazy"
               sx={AboutSectionStyles.image}
             />
 
