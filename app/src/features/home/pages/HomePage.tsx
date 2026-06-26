@@ -11,12 +11,18 @@ import {
   ourServicesConfig,
 } from "@/components/organisms/OurServices";
 
+import {
+  CoffeeExcellence,
+  coffeeExcellenceConfig,
+} from "@/components/organisms/CoffeeExcellence";
+
 const HomePage = () => {
   return (
     <Box>
       <Header config={headerConfig} />
       <AboutSection config={aboutSectionConfig} />
       <OurServices config={ourServicesConfig} />
+      <CoffeeExcellence config={coffeeExcellenceConfig} />
     </Box>
   );
 };

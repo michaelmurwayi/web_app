@@ -7,7 +7,7 @@ import { navigationConfig } from "@/components/organisms/Navigation";
 import { TypewriterText } from "@/components/atoms/TyperWriterText/TypeWriterText";
 import { CoffeeBeansBackground } from "@/components/molecules/CoffeeBeanBackground";
 
-import { coffeeBeansConfig } from "@/config/animations/coffeeBeans.config";
+import { coffeeLeavesConfig } from "@/config/animations/coffeeLeaf.config";
 import { headerStyles } from "./Header.styles";
 
 import type { HeaderProps } from "./Header.types";
@@ -15,7 +15,7 @@ import type { HeaderProps } from "./Header.types";
 const HeaderComponent = ({ config }: HeaderProps) => {
   return (
     <Box sx={headerStyles.root}>
-      <CoffeeBeansBackground config={coffeeBeansConfig} />
+      <CoffeeBeansBackground config={coffeeLeavesConfig} />
       <Navigation config={navigationConfig} />
 
       <Box sx={headerStyles.body}>
