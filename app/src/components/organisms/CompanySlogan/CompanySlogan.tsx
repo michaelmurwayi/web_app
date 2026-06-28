@@ -4,8 +4,6 @@ import { Box, Typography } from "@mui/material";
 
 import { motion } from "framer-motion";
 
-import { SectionHeading } from "@/components/atoms/AboutHeader/SectionHeading";
-
 import type { CompanySloganConfig } from "./CompanySlogan.types";
 
 import { CompanySloganStyles } from "./CompanySlogan.styles";
@@ -34,7 +32,15 @@ const CompanySloganComponent = ({ config }: CompanySloganProps) => {
             duration: 0.8,
           }}
         >
-          <SectionHeading eyebrow={config.eyebrow} title={config.slogan} />
+          <Box sx={CompanySloganStyles.quoteContainer}>
+            <Typography sx={CompanySloganStyles.quoteMark}>❝</Typography>
+
+            <Typography component="blockquote" sx={CompanySloganStyles.slogan}>
+              {config.slogan}
+            </Typography>
+
+            <Typography sx={CompanySloganStyles.quoteMark}>❞</Typography>
+          </Box>
         </motion.div>
       </Box>
     </Box>

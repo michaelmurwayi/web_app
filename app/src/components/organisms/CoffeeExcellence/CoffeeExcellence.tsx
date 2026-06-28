@@ -12,7 +12,7 @@ import { FlavorNote } from "@/components/molecules/FlavorNote";
 import { CoffeeBeansBackground } from "@/components/molecules/CoffeeBeanBackground";
 
 import type { CoffeeExcellenceConfig } from "./CoffeeExcellence.types";
-import { coffeeBeansConfig } from "@/config/animations/coffeeBeans.config";
+import { coffeeBeansConfig } from "@/config/animations/coffeeCherry.config";
 
 import { CoffeeExcellenceStyles } from "./CoffeeExcellence.styles";
 

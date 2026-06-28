@@ -21,6 +21,9 @@ import {
   companySloganConfig,
 } from "@/components/organisms/CompanySlogan";
 
+import { Contact, contactConfig } from "@/components/organisms/Contact";
+import { Footer, footerConfig } from "@/components/organisms/Footer";
+
 const HomePage = () => {
   return (
     <Box>
@@ -29,6 +32,8 @@ const HomePage = () => {
       <OurServices config={ourServicesConfig} />
       <CoffeeExcellence config={coffeeExcellenceConfig} />
       <CompanySlogan config={companySloganConfig} />
+      <Contact config={contactConfig} />
+      <Footer config={footerConfig} />
     </Box>
   );
 };

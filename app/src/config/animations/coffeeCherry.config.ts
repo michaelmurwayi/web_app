@@ -1,9 +1,9 @@
-import BeanImage from "@/assets/coffee bean.jpg";
+import cherryImage from "@/assets/cherry.png";
 
 export const coffeeBeansConfig = {
   count: 100,
 
-  leafImage: BeanImage,
+  leafImage: cherryImage,
 
   minSize: 20,
   maxSize: 50,
