@@ -8,10 +8,7 @@ interface AboutHeroImageGridProps {
   established: string;
 }
 
-const AboutHeroImageGrid = ({
-  images,
-  established,
-}: AboutHeroImageGridProps) => {
+const AboutHeroImageGrid = ({ images }: AboutHeroImageGridProps) => {
   const leftColumn = images.slice(0, 2);
   const rightColumn = images.slice(2, 4);
 
