@@ -12,7 +12,7 @@ export const CoffeeBeansBackgroundStyles = {
 
     pointerEvents: "none",
 
-    zIndex: 1,
+    zIndex: 0,
   },
 
   bean: {

@@ -20,6 +20,11 @@ export const navigationConfig: NavigationConfig = {
       label: "Home",
       path: "/",
     },
+    {
+      id: "about",
+      label: "About",
+      path: "/about",
+    },
   ],
 
   resources: [

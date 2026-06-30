@@ -2,9 +2,5 @@
 
 export const routes = {
   home: "/",
-  ecosystem: "/ecosystem",
-  solutions: "/solutions",
-  impact: "/impact",
-  contact: "/contact",
-  getStarted: "/get-started",
+  about: "/about",
 } as const;
