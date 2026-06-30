@@ -1,8 +1,12 @@
 import { Box } from "@mui/material";
+import AboutHero, {
+  aboutHeroConfig,
+} from "../../../components/organisms/AboutHero";
+
 const AboutPage = () => {
   return (
     <Box>
-      <h1> About</h1>
+      <AboutHero config={aboutHeroConfig} />
     </Box>
   );
 };
