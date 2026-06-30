@@ -7,3 +7,9 @@ export const companySloganConfig: CompanySloganConfig = {
   title: COMPANY_SLOGAN.TITLE,
   slogan: COMPANY_SLOGAN.SLOGAN,
 };
+
+export const companySloganDarkConfig: CompanySloganConfig = {
+  eyebrow: COMPANY_SLOGAN.EYEBROW,
+  title: COMPANY_SLOGAN.TITLE,
+  slogan: COMPANY_SLOGAN.SLOGAN,
+};

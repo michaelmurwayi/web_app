@@ -1,6 +1,7 @@
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
-import { Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
+import { styles } from "./OurStory.styles";
 import type { StoryFeature as StoryFeatureType } from "./OurStory.types";
 
 interface StoryFeatureProps {
@@ -9,13 +10,13 @@ interface StoryFeatureProps {
 
 const StoryFeature = ({ feature }: StoryFeatureProps) => {
   return (
-    <Stack direction="row" spacing={2} alignItems="center">
-      <CheckCircleRoundedIcon color="secondary" fontSize="small" />
+    <Box sx={styles.featureItem}>
+      <CheckCircleRoundedIcon color="secondary" sx={{ fontSize: 22 }} />
 
-      <Typography variant="body1" fontWeight={600}>
+      <Typography variant="body1" sx={styles.featureText}>
         {feature.title}
       </Typography>
-    </Stack>
+    </Box>
   );
 };
 
