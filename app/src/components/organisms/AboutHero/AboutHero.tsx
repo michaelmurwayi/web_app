@@ -9,6 +9,10 @@ import AboutHeroImageGrid from "./AboutHeroImageGrid";
 import AboutHeroStats from "./AboutHeroStats";
 import { styles } from "./AboutHero.styles";
 import type { AboutHeroConfig } from "./AboutHero.types";
+import { CoffeeBeansBackground } from "@/components/molecules/CoffeeBeanBackground";
+
+import { coffeeLeavesConfig } from "@/config/animations/coffeeLeaf.config";
+import { coffeeBeansConfig } from "@/config/animations/coffeeCherry.config";
 
 interface AboutHeroProps {
   config: AboutHeroConfig;
@@ -17,6 +21,8 @@ interface AboutHeroProps {
 const AboutHero = ({ config }: AboutHeroProps) => {
   return (
     <>
+      <CoffeeBeansBackground config={coffeeLeavesConfig} />
+      <CoffeeBeansBackground config={coffeeBeansConfig} />
       {/* Navigation */}
       <Box sx={styles.navigationWrapper}>
         <Navigation config={navigationConfig} />

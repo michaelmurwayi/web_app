@@ -12,6 +12,9 @@ import {
   companySloganConfig,
 } from "@/components/organisms/CompanySlogan";
 
+import { Contact, contactConfig } from "@/components/organisms/Contact";
+import { Footer, footerConfig } from "@/components/organisms/Footer";
+
 const AboutPage = () => {
   return (
     <Box>
@@ -19,6 +22,8 @@ const AboutPage = () => {
       <OurStory config={ourStoryConfig} />
       <MissionVision config={missionVisionConfig} />
       <CompanySloganDark config={companySloganConfig} />
+      <Contact config={contactConfig} />
+      <Footer config={footerConfig} />
     </Box>
   );
 };
