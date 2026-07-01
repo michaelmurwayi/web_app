@@ -22,19 +22,19 @@ export const serviceHeroConfig: AboutHeroConfig = {
 
   stats: [
     {
-      value: "Advocacy",
+      value: "",
       label: "",
     },
     {
-      value: "Agronomy",
+      value: "",
       label: "",
     },
     {
-      value: "Marketing",
+      value: "",
       label: "",
     },
     {
-      value: "Quality Control",
+      value: "",
       label: "",
     },
   ],
