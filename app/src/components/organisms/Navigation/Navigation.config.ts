@@ -25,6 +25,11 @@ export const navigationConfig: NavigationConfig = {
       label: "About",
       path: "/about",
     },
+    {
+      id: "service",
+      label: "Services",
+      path: "/services",
+    },
   ],
 
   resources: [
