@@ -2,7 +2,7 @@ import { alpha } from "@mui/material/styles";
 import type { Theme } from "@mui/material/styles";
 
 export const styles = {
-  section: (theme: Theme) => ({
+  section: () => ({
     py: {
       xs: 8,
       md: 12,

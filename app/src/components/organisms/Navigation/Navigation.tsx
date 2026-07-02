@@ -134,11 +134,13 @@ const NavigationComponent = ({ config }: NavigationProps) => {
                 anchorEl={resourceAnchor}
                 open={Boolean(resourceAnchor)}
                 onClose={handleCloseResources}
-                PaperProps={{
-                  sx: {
-                    mt: 1,
-                    minWidth: 260,
-                    borderRadius: 2,
+                slotProps={{
+                  paper: {
+                    sx: {
+                      mt: 2,
+                      minWidth: 220,
+                      borderRadius: 2,
+                    },
                   },
                 }}
               >

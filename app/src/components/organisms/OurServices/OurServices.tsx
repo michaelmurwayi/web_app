@@ -23,8 +23,6 @@ const OurServicesComponent = ({ config }: OurServicesProps) => {
 
         <Box sx={OurServicesStyles.cards}>
           {config.services.map((service) => {
-            const Icon = service.icon;
-
             return (
               <ServiceCard
                 key={service.id}

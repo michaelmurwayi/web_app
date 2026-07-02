@@ -5,7 +5,7 @@ import {
   OUR_SERVICES_TITLE,
 } from "./OurServices.constants";
 
-import type { OurServicesConfig } from "./OurServices.types";
+import type { OurServicesConfig } from "@/components/organisms/OurServices";
 
 export const ourServicesConfig: OurServicesConfig = {
   eyebrow: OUR_SERVICES_EYEBROW,

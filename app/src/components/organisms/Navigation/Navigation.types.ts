@@ -19,7 +19,7 @@ export interface NavigationBrand {
 export interface NavigationConfig {
   brand: NavigationBrand;
   menuItems: NavigationItem[];
-  resources: NavigationResource;
+  resources: NavigationResource[];
 }
 
 export interface NavigationProps {
